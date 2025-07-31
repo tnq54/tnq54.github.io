@@ -1,0 +1,171 @@
+/* Cài đặt chung cho toàn bộ trang */
+body {
+    h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+}
+    font-family: 'Lato', sans-serif; /* Chọn font chữ dễ đọc */
+    line-height: 1.6; /* Tăng khoảng cách giữa các dòng cho dễ đọc */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Màu nền xám nhạt cho toàn trang */
+    color: #333; /* Màu chữ chính (xám đậm) */
+}
+
+/* Bố cục container chính giữa trang */
+body > * {
+    max-width: 800px; /* Giới hạn chiều rộng tối đa của nội dung */
+    margin: 0 auto; /* Tự động căn giữa nội dung */
+    padding: 20px;
+}
+
+/* Kiểu dáng cho đầu trang (header) */
+header {
+    background-color: #333; /* Nền màu xám đậm */
+    color: #fff; /* Chữ màu trắng */
+    text-align: center; /* Căn giữa văn bản */
+    border-bottom: 4px solid #007BFF; /* Đường viền xanh dương ở dưới */
+}
+
+/* Kiểu dáng cho khu vực nội dung chính */
+main {
+    background-color: #fff; /* Nền trắng cho khu vực bài viết */
+}
+
+/* Kiểu dáng cho mỗi bài viết (article) */
+article {
+    background-color: #fff;
+    border: 1px solid #ddd; /* Viền xám nhạt xung quanh bài viết */
+    padding: 15px;
+    margin-bottom: 20px; /* Khoảng cách giữa các bài viết */
+    border-radius: 5px; /* Bo tròn các góc một chút */
+}
+
+article h3 a {
+    text-decoration: none; /* Bỏ gạch chân của tiêu đề bài viết */
+    color: #007BFF; /* Màu xanh dương cho tiêu đề */
+}
+
+article h3 a:hover {
+    text-decoration: underline; /* Thêm lại gạch chân khi di chuột qua */
+}
+
+
+/* Kiểu dáng cho chân trang (footer) */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666; /* Chữ màu xám nhạt hơn */
+}
+/* --- Thêm vào cuối tệp style.css --- */
+
+/* Kiểu dáng cho menu điều hướng */
+nav {
+    background-color: #444; /* Nền xám đậm hơn một chút */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff; /* Chữ màu trắng */
+    text-decoration: none; /* Bỏ gạch chân */
+    padding: 10px 20px; /* Tạo khoảng cách xung quanh liên kết */
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #555; /* Đổi màu nền khi di chuột qua */
+}
+/* --- Thêm vào cuối tệp style.css --- */
+
+/* Kiểu dáng cho biểu mẫu liên hệ */
+form div {
+    margin-bottom: 15px; /* Khoảng cách giữa các trường thông tin */
+}
+
+form label {
+    display: block; /* Hiển thị nhãn trên một dòng riêng */
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng chiều rộng */
+}
+
+form button {
+    background-color: #007BFF; /* Màu nền xanh dương */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* Biến con trỏ thành hình bàn tay */
+}
+
+form button:hover {
+    background-color: #0056b3; /* Sẫm màu hơn khi di chuột qua */
+}
+/* --- Thêm vào cuối tệp style.css --- */
+
+/* 1. Thiết lập cơ bản cho tất cả hình ảnh trong bài viết */
+article img {
+    max-width: 100%; /* Đảm bảo hình ảnh không bao giờ tràn ra ngoài khung bài viết */
+    height: auto;   /* Giữ đúng tỷ lệ của hình ảnh */
+    border-radius: 5px; /* Bo tròn góc cho hình ảnh trông mềm mại hơn */
+}
+
+/* 2. Lớp (class) để canh giữa hình ảnh */
+.center {
+    display: block; /* Biến hình ảnh thành một khối (block) */
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; /* Có thể điều chỉnh chiều rộng của ảnh so với khung */
+}
+
+/* 3. Lớp để hình ảnh nằm bên trái, chữ bao quanh */
+.float-left {
+    float: left;
+    margin-right: 20px; /* Tạo khoảng cách giữa hình ảnh và văn bản bên phải */
+    margin-bottom: 10px; /* Tạo khoảng cách với văn bản bên dưới */
+    width: 40%; /* Chiếm 40% chiều rộng của khung chứa */
+}
+
+/* 4. Lớp để hình ảnh nằm bên phải, chữ bao quanh */
+.float-right {
+    float: right;
+    margin-left: 20px; /* Tạo khoảng cách giữa hình ảnh và văn bản bên trái */
+    margin-bottom: 10px;
+    width: 40%;
+}
+/* ========================================= */
+/* THIẾT KẾ ĐÁP ỨNG (RESPONSIVE)      */
+/* ========================================= */
+
+/* Áp dụng cho các màn hình có chiều rộng tối đa là 768px (máy tính bảng và điện thoại) */
+@media (max-width: 768px) {
+
+    /* Giảm kích thước chữ của tiêu đề chính cho gọn hơn */
+    header h1 {
+        font-size: 2em;
+    }
+
+    /* Điều chỉnh menu điều hướng để các mục xếp chồng lên nhau */
+    nav a {
+        display: block; /* Mỗi liên kết chiếm một dòng */
+        text-align: center;
+    }
+    
+    /* Bỏ float của hình ảnh để chúng không nằm cạnh văn bản nữa */
+    .float-left,
+    .float-right {
+        float: none; /* Tắt float */
+        width: 100%; /* Cho ảnh chiếm toàn bộ chiều rộng */
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
