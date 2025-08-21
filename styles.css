@@ -1,0 +1,157 @@
+/* ===== Reset mini ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ===== Biến màu sắc ===== */
+:root {
+  --primary: #6236FF;
+  --primary-dark: #4b28d1;
+  --bg: #F5F5F5;
+  --text: #252525;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+/* ===== Header / Hero ===== */
+header {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=60')
+             center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+}
+header .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+h1 { font-size: clamp(2.2rem, 5vw + .5rem, 3.5rem); margin-bottom: .5rem; }
+header p { font-size: 1.25rem }
+
+/* ===== Navbar ===== */
+nav {
+  background: var(--primary);
+  color: #fff;
+  padding: .5rem 1rem;
+  display: flex;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+}
+nav a:hover { opacity: .75; }
+
+/* ===== Layout ===== */
+section {
+  padding: 4rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+section h2::after {
+  content: "";
+  width: 50%;
+  height: 3px;
+  background: var(--primary);
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+}
+.cols { display: flex; flex-wrap: wrap; gap: 2rem; }
+.col  { flex: 1 1 280px; }
+
+/* ===== Accordion ===== */
+.accordion-item {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: .8rem;
+  background: #fff;
+}
+.accordion-header {
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  padding: .75rem 1rem;
+  font-weight: 700;
+}
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease;
+  padding: 0 1rem;
+  background: #fafafa;
+}
+.accordion-body p { padding: .75rem 0; }
+
+/* ===== Trích dẫn ===== */
+blockquote {
+  font-style: italic;
+  border-left: 4px solid var(--primary);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: #555;
+}
+
+/* ===== Form ===== */
+form {
+  display: grid;
+  gap: 1rem;
+}
+input, textarea {
+  padding: .75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+button {
+  background: var(--primary);
+  border: none;
+  color: #fff;
+  padding: .75rem 2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 700;
+}
+button:hover { background: var(--primary-dark); }
+.hidden { display: none; }
+
+/* ===== Footer ===== */
+footer {
+  background: #111;
+  color: #bbb;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: .9rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px){
+  nav { flex-wrap: wrap; justify-content: center; }
+  .accordion-header { font-size: .95rem; }
+}
